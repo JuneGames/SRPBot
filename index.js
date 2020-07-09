@@ -113,6 +113,3 @@ bot.on("message", async message => {
 })
 
 bot.login(process.env.token);
-bot.listen(3000, function () {
-    console.log('SRPBot app listening on port 3000!');
-  })
