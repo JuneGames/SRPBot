@@ -44,6 +44,7 @@ module.exports.run = async (bot, message, args) => {
     var suggestieEmbedLog = new discord.MessageEmbed()
         .setTitle("SuggestieLog")
         .setDescription("Suggestie is gemaakt door " + message.author.username + " Bericht: \n**" + `${options.bericht}` + "**")
+        .setFooter("Laat weten met 👍 of 👎 wat jij van deze suggestie vind")
         .setTimestamp();
         
         suggestieL.send(suggestieEmbedLog);
