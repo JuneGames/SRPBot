@@ -28,6 +28,9 @@ module.exports.run = async (bot, message, args) => {
     var suggestieEmbed = new discord.MessageEmbed()
         .setTitle("Suggestie van " + message.author.username)
         .setDescription(`${options.bericht}`)
+        .setFooter("Laat weten met 👍 of 👎 wat jij van deze suggestie vind")
+        .setTimestamp();
+
 
         var channel = message.member.guild.channels.cache.find(channel => channel.name === "📊suggesties");
         if (!channel) return message.reply("Dit kanaal bestaat niet.").then(msg => msg.delete({ timeout: 5000 }));
